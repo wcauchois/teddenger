@@ -124,7 +124,7 @@ var RootView = React.createClass({
   },
 
   componentWillUnmount: function() {
-    eventBus.remoteListener('messages', this.handleMessages);
+    eventBus.removeListener('messages', this.handleMessages);
   },
 
   render: function() {

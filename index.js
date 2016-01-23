@@ -85,7 +85,7 @@ wss.on('connection', function(ws) {
       }
     };
     facebookEvents.on('message', messageListener);
-    facebookApi.getThreadHistory(config.thread_id, 0, 30, null, function(err, history) {
+    facebookApi && facebookApi.getThreadHistory(config.thread_id, 0, 30, null, function(err, history) {
       if (err) {
         logError(err);
       } else {
