@@ -43,13 +43,6 @@ var facebookEvents = new EventEmitter();
 login({email: config.fb_login, password: config.fb_pass}, function(err, api) {
   util.log("Logged in to Facebook");
   facebookApi = api;
-  api.getThreadList(0, 15, function(err, list) {
-    var foundThread = _.find(list, function(t) { return t.threadID == config.thread_id });
-    if (foundThread) {
-    } else {
-      logError("Could not find thread " + config.thread_id + " in the list");
-    }
-  });
   api.listen(function(err, message) {
     if (err) {
       logError(err);
