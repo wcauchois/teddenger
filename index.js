@@ -63,6 +63,13 @@ var rpcs = {
   }
 };
 
+function renderMessage(m) {
+  return {
+    senderName: m.senderName,
+    body: m.body
+  };
+}
+
 
 var wss = new WebSocketServer({server: server});
 wss.on('connection', function(ws) {
@@ -73,8 +80,8 @@ wss.on('connection', function(ws) {
   var messageListener;
   d.on('remote', function(remote) {
     messageListener = function(message) {
-      if (message.threadID === config.thread_id) {
-        remote.gotMessages([message]);
+      if (message.threadID == config.thread_id) {
+        remote.gotMessages([renderMessage(message)]);
       }
     };
     facebookEvents.on('message', messageListener);
@@ -82,7 +89,7 @@ wss.on('connection', function(ws) {
       if (err) {
         logError(err);
       } else {
-        remote.gotMessages(history);
+        remote.gotMessages(history.map(renderMessage));
       }
     });
   });
