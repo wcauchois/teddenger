@@ -1,0 +1,40 @@
+{
+  "name": "teddenger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.1.1",
+    "browserify": "^13.0.0",
+    "classnames": "^2.2.3",
+    "colors": "^1.1.2",
+    "config": "^1.19.0",
+    "dnode": "^1.2.2",
+    "express": "^4.13.4",
+    "facebook-chat-api": "^1.0.6",
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.5",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^1.5.1",
+    "json5": "^0.4.0",
+    "keymirror": "^0.1.1",
+    "lodash": "^4.0.0",
+    "moment": "^2.11.1",
+    "morgan": "^1.6.1",
+    "mustache-express": "^1.2.2",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "reactify": "^1.1.1",
+    "request": "^2.67.0",
+    "through2": "^2.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "websocket-stream": "^3.0.1",
+    "ws": "^1.0.1",
+    "yargs": "^3.32.0"
+  }
+}

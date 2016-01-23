@@ -1,0 +1,4 @@
+public/build
+config/development.json5
+*.swp
+node_modules
